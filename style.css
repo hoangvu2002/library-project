@@ -11,6 +11,15 @@
     flex-direction: column;
 }
 
+.info ul {
+    list-style-type: none;
+}
+
+ul > li + li {
+    margin-top: 1em;
+}
+
 .display {
     flex: 3;
+    background-color: #e0e0e0;
 }
