@@ -122,6 +122,8 @@ label {
     padding: 5px 20px;
     cursor: pointer;
     border: 1px solid black;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .card p {
