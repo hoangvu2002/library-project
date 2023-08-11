@@ -12,6 +12,11 @@ function Book(title, author, pages, read=false) {
   this.read = read;
 }
 
+Book.prototype.getIndex = function () {
+    const index = myLibrary.indexOf(this);
+    return index;
+}
+
 function addBookToLibrary() {
   const title = document.getElementById('title');
   const author = document.getElementById('author');
@@ -47,8 +52,19 @@ function displayCard() {
         author.textContent = book.author;
         pages.textContent = book.pages;
         deleteButton.textContent = 'Delete';
+
+        const index = book.getIndex();
+        title.dataset.index = index;
+
+        deleteButton.onclick = function () {
+            myLibrary.splice(Number(index), 1);
+            display.removeChild(bookCard);
+            displayCard();
+        }
     }
 }
+
+
 
 const add = document.querySelector("form button");
 add.onclick = addBookToLibrary;
