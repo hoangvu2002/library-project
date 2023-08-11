@@ -27,7 +27,9 @@ function addBookToLibrary() {
 
 
 function displayCard() {
-    
+    while (display.firstElementChild) {
+        display.removeChild(display.firstElementChild);
+    }
     for (const book of myLibrary) {
         const bookCard = document.createElement('div');
         bookCard.classList.add('card');
