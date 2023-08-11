@@ -1,6 +1,7 @@
 const form = document.querySelector("form");
 const display = document.querySelector('.display');
-form.onsubmit = (e) => {e.preventDefault();}
+form.onsubmit = (e) => {e.preventDefault();
+}
 
 let myLibrary = [];
 
@@ -48,3 +49,6 @@ function displayCard() {
         deleteButton.textContent = 'Delete';
     }
 }
+
+const add = document.querySelector("form button");
+add.onclick = addBookToLibrary;

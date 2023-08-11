@@ -1,6 +1,8 @@
 const form = document.querySelector("form");
 const display = document.querySelector(".display");
-form.onsubmit = (e) => {e.preventDefault();}
+form.onsubmit = (e) => {//e.preventDefault();
+  addBookToLibrary();
+}
 
 let myLibrary = [];
 
@@ -43,3 +45,4 @@ function display() {
         deleteButton.textContent = 'Delete';
     }
 }
+
