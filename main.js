@@ -40,6 +40,9 @@ function displayCard() {
         const bookCard = document.createElement('div');
         bookCard.classList.add('card');
         const title = document.createElement('h3');
+        if (book.read) {
+            title.classList.add('read');
+        }
         const author = document.createElement('p');
         const pages = document.createElement('p');
         const deleteButton = document.createElement('button');
@@ -61,6 +64,13 @@ function displayCard() {
             display.removeChild(bookCard);
             displayCard();
         }
+
+
+        title.onclick = function() {
+            title.classList.toggle('read');
+            myLibrary[index].read = title.classList.contains('read');
+        }
+
     }
 }
 
