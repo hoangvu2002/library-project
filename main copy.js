@@ -1,5 +1,5 @@
 const form = document.querySelector("form");
-const display = document.querySelector('.display');
+const display = document.querySelector(".display");
 form.onsubmit = (e) => {e.preventDefault();}
 
 let myLibrary = [];
@@ -22,12 +22,9 @@ function addBookToLibrary() {
   author.value = "";
   pages.value="";
   read.checked=false;
-  displayCard();
 }
 
-
-function displayCard() {
-    
+function display() {
     for (const book of myLibrary) {
         const bookCard = document.createElement('div');
         bookCard.classList.add('card');
