@@ -153,3 +153,13 @@ label {
 .card h3.read {
     background-color: #60d600;
 }
+
+dialog {
+    padding: 1em;
+    margin: auto auto;
+    border-radius: 10px;
+}
+
+dialog::backdrop {
+    background-color: rgba(20, 16, 16, 0.801);
+}

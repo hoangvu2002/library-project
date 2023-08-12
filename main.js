@@ -28,6 +28,7 @@ function addBookToLibrary() {
   author.value = "";
   pages.value="";
   read.checked=false;
+  modal.close();
   displayCard();
 }
 
@@ -78,3 +79,8 @@ function displayCard() {
 
 const add = document.querySelector("form button");
 add.onclick = addBookToLibrary;
+
+
+const addBookCard = document.querySelector('.add');
+const modal = document.querySelector("[data-modal]");
+addBookCard.onclick = () => {modal.showModal()};

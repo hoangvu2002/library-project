@@ -11,27 +11,30 @@
     <div class="main">
         <div class="info">
             <h2>Boymycon library</h2>
-            <form action="" method="post">
-                <ul>
-                    <li>
-                        <label for="title">Title:</label>
-                        <input type="text" name="title" id="title">
-                    </li>
-                    <li>
-                        <label for="author">Author:</label>
-                        <input type="text" name="author" id="author">
-                    </li>
-                    <li>
-                        <label for="pages">Pages:</label>
-                        <input type="number" name="pages" id="pages">
-                    </li>
-                    <li>
-                        <label for="read"><p>Have you read it?</p></label>
-                        <input type="checkbox" name="read" id="read" value="read">
-                    </li>
-                    <li><button type="submit">Add</button></li>
-                </ul>
-            </form>
+            <button class="add">Add your book now!</button>
+            <dialog data-modal>
+                <form action="" method="post">
+                    <ul>
+                        <li>
+                            <label for="title">Title:</label>
+                            <input type="text" name="title" id="title">
+                        </li>
+                        <li>
+                            <label for="author">Author:</label>
+                            <input type="text" name="author" id="author">
+                        </li>
+                        <li>
+                            <label for="pages">Pages:</label>
+                            <input type="number" name="pages" id="pages">
+                        </li>
+                        <li>
+                            <label for="read"><p>Have you read it?</p></label>
+                            <input type="checkbox" name="read" id="read" value="read">
+                        </li>
+                        <li><button type="submit" formmethod="dialog">Add</button></li>
+                    </ul>
+                </form>
+            </dialog>
         </div>
         <div class="content">
             <div class="display">
