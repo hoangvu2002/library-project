@@ -84,3 +84,15 @@ add.onclick = addBookToLibrary;
 const addBookCard = document.querySelector('.add');
 const modal = document.querySelector("[data-modal]");
 addBookCard.onclick = () => {modal.showModal()};
+
+modal.addEventListener("click", e => {
+    const dialogDimensions = modal.getBoundingClientRect()
+    if (
+      e.clientX < dialogDimensions.left ||
+      e.clientX > dialogDimensions.right ||
+      e.clientY < dialogDimensions.top ||
+      e.clientY > dialogDimensions.bottom
+    ) {
+      modal.close()
+    }
+  })
