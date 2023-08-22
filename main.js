@@ -5,17 +5,27 @@ form.onsubmit = (e) => {e.preventDefault();
 
 let myLibrary = [];
 
-function Book(title, author, pages, read=false) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
-}
-
-Book.prototype.getIndex = function () {
+class Book {
+  title;
+  author;
+  pages;
+  read;
+  constructor(title, author, pages, read=false) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+  }
+  getIndex() {
     const index = myLibrary.indexOf(this);
     return index;
+  }
 }
+
+//Book.prototype.getIndex = function () {
+//    const index = myLibrary.indexOf(this);
+//    return index;
+//}
 
 function addBookToLibrary() {
   const title = document.getElementById('title');
